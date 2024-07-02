@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.paloma.product_manager.exception.ControllerAdviceHandlerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-07-02T17:57:16" hostname="DESKTOP-1G6E6NJ" time="0.162">
+  <properties/>
+  <testcase name="testHandleProductNotFoundException()" classname="com.paloma.product_manager.exception.ControllerAdviceHandlerTest" time="0.128"/>
+  <testcase name="testHandleProductAlreadyExistsException()" classname="com.paloma.product_manager.exception.ControllerAdviceHandlerTest" time="0.029"/>
+  <system-out><![CDATA[2024-07-02T14:57:14.495-03:00  INFO 11800 --- [product-manager] [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.paloma.product_manager.exception.ControllerAdviceHandlerTest]: ControllerAdviceHandlerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-07-02T14:57:14.715-03:00  INFO 11800 --- [product-manager] [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.paloma.product_manager.ProductManagerApplication for test class com.paloma.product_manager.exception.ControllerAdviceHandlerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.1)
+
+2024-07-02T14:57:14.910-03:00  INFO 11800 --- [product-manager] [    Test worker] c.p.p.e.ControllerAdviceHandlerTest      : Starting ControllerAdviceHandlerTest using Java 22.0.1 with PID 11800 (started by Paloma in C:\ws\product-manager-exercicio-4)
+2024-07-02T14:57:14.911-03:00  INFO 11800 --- [product-manager] [    Test worker] c.p.p.e.ControllerAdviceHandlerTest      : No active profile set, falling back to 1 default profile: "default"
+2024-07-02T14:57:16.072-03:00  INFO 11800 --- [product-manager] [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-07-02T14:57:16.072-03:00  INFO 11800 --- [product-manager] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-07-02T14:57:16.074-03:00  INFO 11800 --- [product-manager] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-07-02T14:57:16.111-03:00  INFO 11800 --- [product-manager] [    Test worker] c.p.p.e.ControllerAdviceHandlerTest      : Started ControllerAdviceHandlerTest in 1.383 seconds (process running for 47.004)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

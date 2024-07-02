@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ProductMapper.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">product-manager</a> &gt; <a href="index.source.html" class="el_package">com.paloma.product_manager.adapters.mapper</a> &gt; <span class="el_source">ProductMapper.java</span></div><h1>ProductMapper.java</h1><pre class="source lang-java linenums">package com.paloma.product_manager.adapters.mapper;
+
+import com.paloma.product_manager.adapters.dto.ProductDTO;
+import com.paloma.product_manager.domain.model.ProductEntity;
+
+<span class="nc" id="L6">public class ProductMapper {</span>
+
+    public static ProductDTO convertEntityToDto(ProductEntity entity){
+<span class="fc" id="L9">        return ProductDTO.builder()</span>
+<span class="fc" id="L10">                .id(entity.getId())</span>
+<span class="fc" id="L11">                .name(entity.getName())</span>
+<span class="fc" id="L12">                .description(entity.getDescription())</span>
+<span class="fc" id="L13">                .price(entity.getPrice())</span>
+<span class="fc" id="L14">                .build();</span>
+    }
+
+    public static ProductEntity convertDtoToEntity(ProductDTO dto){
+<span class="fc" id="L18">        return ProductEntity.builder()</span>
+<span class="fc" id="L19">                .id(dto.getId())</span>
+<span class="fc" id="L20">                .name(dto.getName())</span>
+<span class="fc" id="L21">                .description(dto.getDescription())</span>
+<span class="fc" id="L22">                .price(dto.getPrice())</span>
+<span class="fc" id="L23">                .build();</span>
+    }
+}
+
+/**
+ * Comentarios sobre o que foi aplicado de SOLID
+ * Single Responsibility Principle (SRP): A classe ProductMapper tem uma responsabilidade Ãºnica de converter objetos entre ProductEntity e ProductDTO. Cada mÃ©todo (convertEntityToDto e convertDtoToEntity) executa uma Ãºnica operaÃ§Ã£o de conversÃ£o.
+ * Open/Closed Principle (OCP): Os mÃ©todos estÃ£o fechados para alteraÃ§Ã£o. Qualquer nova conversÃ£o deve ser adicionada Ã  um mÃ©todo novo.
+ *
+ * AlÃ©m dos princÃ­pios SOLID, o cÃ³digo tambÃ©m segue algumas boas prÃ¡ticas de Clean Code:
+ * Os nomes dos mÃ©todos sÃ£o descritivos e expressam claramente sua funÃ§Ã£o
+ * O uso do padrÃ£o Builder (ProductDTO.builder() e ProductEntity.builder()) facilita a criaÃ§Ã£o de objetos complexos, mantendo o cÃ³digo limpo e legÃ­vel.
+ */
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

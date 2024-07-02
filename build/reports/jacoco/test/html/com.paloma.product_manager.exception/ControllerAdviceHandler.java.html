@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ControllerAdviceHandler.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">product-manager</a> &gt; <a href="index.source.html" class="el_package">com.paloma.product_manager.exception</a> &gt; <span class="el_source">ControllerAdviceHandler.java</span></div><h1>ControllerAdviceHandler.java</h1><pre class="source lang-java linenums">package com.paloma.product_manager.exception;
+
+import com.paloma.product_manager.adapters.dto.ProductDTO;
+import com.paloma.product_manager.domain.exception.ErrorResponse;
+import com.paloma.product_manager.domain.exception.ProductAlreadyExistsException;
+import com.paloma.product_manager.domain.exception.ProductNotFoundException;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+
+@ControllerAdvice
+<span class="fc" id="L13">public class ControllerAdviceHandler {</span>
+
+    @ExceptionHandler(ProductNotFoundException.class)
+    public ResponseEntity&lt;ErrorResponse&gt; handleProductNotFoundException(ProductNotFoundException ex) {
+<span class="fc" id="L17">        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ErrorResponse.builder()</span>
+<span class="fc" id="L18">                .message(ex.getMessage())</span>
+<span class="fc" id="L19">                .build());</span>
+    }
+
+    @ExceptionHandler(ProductAlreadyExistsException.class)
+    public ResponseEntity&lt;ErrorResponse&gt; handleProductAlreadyExistsException(ProductAlreadyExistsException ex) {
+<span class="fc" id="L24">        ErrorResponse errorResponse = ErrorResponse.builder()</span>
+<span class="fc" id="L25">                .message(ex.getMessage())</span>
+<span class="fc" id="L26">                .product(ex.getProduct()).build();</span>
+<span class="fc" id="L27">        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorResponse);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

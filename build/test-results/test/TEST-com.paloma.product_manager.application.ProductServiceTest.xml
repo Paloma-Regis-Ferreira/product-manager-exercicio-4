@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.paloma.product_manager.application.ProductServiceTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2024-07-02T17:57:12" hostname="DESKTOP-1G6E6NJ" time="0.724">
+  <properties/>
+  <testcase name="shouldDeleteWithSuccess()" classname="com.paloma.product_manager.application.ProductServiceTest" time="0.461"/>
+  <testcase name="shouldReturnDtoListWhenCallGetAllProductsAndEntityDescriptionIsNull()" classname="com.paloma.product_manager.application.ProductServiceTest" time="0.045"/>
+  <testcase name="shouldReturnDtoWhenEntityIdExists()" classname="com.paloma.product_manager.application.ProductServiceTest" time="0.035"/>
+  <testcase name="shouldCreateProductWhitTreatedName()" classname="com.paloma.product_manager.application.ProductServiceTest" time="0.026"/>
+  <testcase name="shouldCreateProductWithSuccessWhenProductNameDoesNotExistInDatabase()" classname="com.paloma.product_manager.application.ProductServiceTest" time="0.021"/>
+  <testcase name="shouldUpdateProductWithSuccessAndFinalNameTreated()" classname="com.paloma.product_manager.application.ProductServiceTest" time="0.016"/>
+  <testcase name="shouldNotCreateProductWhenProductNameAlreadyExistsInDatabase()" classname="com.paloma.product_manager.application.ProductServiceTest" time="0.028"/>
+  <testcase name="shouldReturnDtoListWhenCallGetAllProducts()" classname="com.paloma.product_manager.application.ProductServiceTest" time="0.01"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
